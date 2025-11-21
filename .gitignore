@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Database files
+*.db
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Chrome extension build
+extension/
+
+# Axure / prototype files
+*.rplib
+*.rp
+
+# Test input/output files
+test-*.json
+test-*.html
+test-token.txt
+
+# Scripts that should not be tracked
+check-db.js
+create-icons.js
+
+# Claude folder or AI metadata
+.claude/

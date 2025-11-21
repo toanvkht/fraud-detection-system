@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Education - AntiPhish</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                <span class="brand-name">AntiPhish</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/education.html" class="active">Education</a></li>
+                <li><a href="/report.html">Scan & Report</a></li>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="authLink">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Phishing & Fraud Education</h1>
+            <p>Learn how to identify and protect yourself from online scams and phishing attacks</p>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-card">
+                <h3>Quick Navigation</h3>
+                <ul class="toc-list">
+                    <li><a href="#what-is-phishing">What is Phishing?</a></li>
+                    <li><a href="#types-of-phishing">Types of Phishing Attacks</a></li>
+                    <li><a href="#red-flags">Red Flags to Watch For</a></li>
+                    <li><a href="#examples">Real-World Examples</a></li>
+                    <li><a href="#best-practices">Security Best Practices</a></li>
+                    <li><a href="#what-to-do">What To Do If You're Targeted</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Phishing -->
+    <section id="what-is-phishing" class="education-section">
+        <div class="container">
+            <h2 class="section-title">What is Phishing?</h2>
+            <div class="content-grid">
+                <div class="content-main">
+                    <p class="lead">Phishing is a type of cyber attack where criminals impersonate legitimate organizations or individuals to trick you into revealing sensitive information such as passwords, credit card numbers, or personal data.</p>
+
+                    <h3>How Phishing Works</h3>
+                    <div class="info-box">
+                        <p>Attackers typically use one or more of these tactics:</p>
+                        <ul>
+                            <li><strong>Urgency:</strong> Creating a sense of emergency to make you act without thinking</li>
+                            <li><strong>Authority:</strong> Pretending to be someone in a position of power or trust</li>
+                            <li><strong>Fear:</strong> Threatening negative consequences if you don't comply</li>
+                            <li><strong>Curiosity:</strong> Using enticing offers or information to lure you in</li>
+                        </ul>
+                    </div>
+
+                    <h3>The Impact of Phishing</h3>
+                    <div class="stats-inline">
+                        <div class="stat-inline">
+                            <span class="stat-inline-number">3.4 billion</span>
+                            <span class="stat-inline-label">Phishing emails sent daily</span>
+                        </div>
+                        <div class="stat-inline">
+                            <span class="stat-inline-number">$12.5M</span>
+                            <span class="stat-inline-label">Average cost of a data breach</span>
+                        </div>
+                        <div class="stat-inline">
+                            <span class="stat-inline-number">32%</span>
+                            <span class="stat-inline-label">Of breaches involve phishing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-sidebar">
+                    <div class="tip-box tip-warning">
+                        <h4>Did You Know?</h4>
+                        <p>Over 90% of successful cyber attacks start with a phishing email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Phishing -->
+    <section id="types-of-phishing" class="education-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Types of Phishing Attacks</h2>
+            <div class="attack-types-grid">
+                <div class="attack-type-card">
+                    <div class="attack-icon">📧</div>
+                    <h3>Email Phishing</h3>
+                    <p>The most common type where attackers send fraudulent emails pretending to be from legitimate companies like banks, online services, or government agencies.</p>
+                    <div class="example-tag">Example: "Your account has been suspended. Click here to verify."</div>
+                </div>
+
+                <div class="attack-type-card">
+                    <div class="attack-icon">📱</div>
+                    <h3>SMS Phishing (Smishing)</h3>
+                    <p>Phishing attacks delivered via text messages, often containing malicious links or requesting personal information.</p>
+                    <div class="example-tag">Example: "You've won a prize! Click this link to claim it."</div>
+                </div>
+
+                <div class="attack-type-card">
+                    <div class="attack-icon">📞</div>
+                    <h3>Voice Phishing (Vishing)</h3>
+                    <p>Attackers call you pretending to be from legitimate organizations to extract sensitive information over the phone.</p>
+                    <div class="example-tag">Example: "This is IRS. You owe back taxes. Pay immediately."</div>
+                </div>
+
+                <div class="attack-type-card">
+                    <div class="attack-icon">🎯</div>
+                    <h3>Spear Phishing</h3>
+                    <p>Highly targeted attacks aimed at specific individuals or organizations using personalized information to appear more legitimate.</p>
+                    <div class="example-tag">Example: "Hi [Your Name], your boss needs this ASAP..."</div>
+                </div>
+
+                <div class="attack-type-card">
+                    <div class="attack-icon">🐋</div>
+                    <h3>Whaling</h3>
+                    <p>Phishing attacks that target high-profile individuals like CEOs, CFOs, or other executives with access to sensitive data.</p>
+                    <div class="example-tag">Example: "Urgent legal matter requires your immediate attention."</div>
+                </div>
+
+                <div class="attack-type-card">
+                    <div class="attack-icon">🔗</div>
+                    <h3>Clone Phishing</h3>
+                    <p>Attackers copy a legitimate email you previously received, replace links with malicious ones, and resend it claiming to be an update.</p>
+                    <div class="example-tag">Example: "Resending the invoice with updated payment link."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Red Flags -->
+    <section id="red-flags" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Red Flags to Watch For</h2>
+            <p class="section-subtitle">Learn to recognize the warning signs of phishing attempts</p>
+
+            <div class="red-flags-grid">
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Suspicious Sender Address</h3>
+                    <p>Check the email address carefully. Phishers often use addresses that look similar to legitimate ones but have subtle differences.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Suspicious</span>
+                            <code>support@paypa1.com</code> (note the "1" instead of "l")
+                        </div>
+                        <div class="example-item good">
+                            <span class="badge badge-success">Legitimate</span>
+                            <code>support@paypal.com</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Generic Greetings</h3>
+                    <p>Legitimate companies usually address you by name. Be suspicious of emails that use generic greetings.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Suspicious</span>
+                            "Dear Customer" or "Dear User"
+                        </div>
+                        <div class="example-item good">
+                            <span class="badge badge-success">Legitimate</span>
+                            "Dear John Smith"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Urgency and Threats</h3>
+                    <p>Phishing emails often create a false sense of urgency to pressure you into acting quickly without thinking.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Red Flag</span>
+                            "Your account will be closed in 24 hours!"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Suspicious Links</h3>
+                    <p>Hover over links (don't click!) to see the actual URL. Phishing links often lead to fake websites.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Suspicious</span>
+                            <code>http://secure-bank-login.ru</code>
+                        </div>
+                        <div class="example-item good">
+                            <span class="badge badge-success">Legitimate</span>
+                            <code>https://www.bank.com/login</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Poor Grammar and Spelling</h3>
+                    <p>Professional organizations proofread their communications. Multiple errors are a red flag.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Red Flag</span>
+                            "We notise unusual activity in you're account"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Unexpected Attachments</h3>
+                    <p>Don't open attachments from unknown senders, especially .exe, .zip, or .scr files.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Dangerous</span>
+                            invoice.pdf.exe
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Requests for Personal Information</h3>
+                    <p>Legitimate organizations never ask for passwords, credit card numbers, or social security numbers via email.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Red Flag</span>
+                            "Please verify your password and credit card number"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="red-flag-card">
+                    <div class="flag-icon danger">⚠️</div>
+                    <h3>Too Good to Be True Offers</h3>
+                    <p>If an offer seems too good to be true, it probably is. Be skeptical of unexpected prizes or deals.</p>
+                    <div class="example-block">
+                        <div class="example-item bad">
+                            <span class="badge badge-danger">Red Flag</span>
+                            "You've won $1,000,000! Click to claim!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Examples -->
+    <section id="examples" class="education-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Real-World Examples</h2>
+            <p class="section-subtitle">Learn from actual phishing attempts</p>
+
+            <div class="examples-container">
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>Example 1: Fake Bank Alert</h3>
+                        <span class="risk-badge high">High Risk</span>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-message">
+                            <p><strong>Subject:</strong> URGENT: Suspicious Activity on Your Account</p>
+                            <p><strong>From:</strong> security@bank-alerts.com</p>
+                            <p class="message-body">
+                                "Dear Customer,<br><br>
+                                We have detected unusual activity on your account. Your account will be suspended in 24 hours if you do not verify your identity immediately.<br><br>
+                                Click here to verify: http://verify-account-now.com<br><br>
+                                Thank you,<br>
+                                Security Team"
+                            </p>
+                        </div>
+                        <div class="example-analysis">
+                            <h4>Red Flags Identified:</h4>
+                            <ul>
+                                <li>Generic greeting ("Dear Customer")</li>
+                                <li>Creates urgency and fear</li>
+                                <li>Suspicious sender domain</li>
+                                <li>Suspicious URL (not the bank's official website)</li>
+                                <li>Requests immediate action</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>Example 2: Package Delivery Scam</h3>
+                        <span class="risk-badge high">High Risk</span>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-message">
+                            <p><strong>Text Message:</strong></p>
+                            <p class="message-body">
+                                "Your package could not be delivered due to incomplete address. Update your info here: bit.ly/pack3456<br>
+                                - FedEx"
+                            </p>
+                        </div>
+                        <div class="example-analysis">
+                            <h4>Red Flags Identified:</h4>
+                            <ul>
+                                <li>Unexpected message about a package</li>
+                                <li>Uses URL shortener to hide real destination</li>
+                                <li>Creates urgency</li>
+                                <li>Not from official FedEx number/domain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>Example 3: Fake Job Offer</h3>
+                        <span class="risk-badge medium">Medium Risk</span>
+                    </div>
+                    <div class="example-content">
+                        <div class="example-message">
+                            <p><strong>Subject:</strong> Congratulations! Job Offer</p>
+                            <p><strong>From:</strong> hr@company-hiring.biz</p>
+                            <p class="message-body">
+                                "Hello,<br><br>
+                                Congratulations! After reviewing your resume, we would like to offer you a position with our company. The salary is $5,000/month for remote work.<br><br>
+                                To process your application, please provide your SSN and bank details for direct deposit setup.<br><br>
+                                Best regards"
+                            </p>
+                        </div>
+                        <div class="example-analysis">
+                            <h4>Red Flags Identified:</h4>
+                            <ul>
+                                <li>Unsolicited job offer</li>
+                                <li>Requests sensitive information (SSN, bank details)</li>
+                                <li>Suspicious domain (.biz instead of company domain)</li>
+                                <li>Offer seems too good (high pay for easy work)</li>
+                                <li>No interview process mentioned</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Security Best Practices</h2>
+            <div class="best-practices-grid">
+                <div class="practice-card">
+                    <div class="practice-number">1</div>
+                    <h3>Verify Before You Trust</h3>
+                    <p>Always verify the sender's identity through official channels before responding to any request for information or action.</p>
+                    <ul>
+                        <li>Contact the organization directly using official contact information</li>
+                        <li>Don't use contact details provided in the suspicious message</li>
+                        <li>Check official websites by typing the URL directly</li>
+                    </ul>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-number">2</div>
+                    <h3>Use Strong Authentication</h3>
+                    <p>Protect your accounts with strong, unique passwords and multi-factor authentication (MFA).</p>
+                    <ul>
+                        <li>Use different passwords for different accounts</li>
+                        <li>Enable two-factor authentication (2FA) wherever possible</li>
+                        <li>Use a password manager to generate and store passwords</li>
+                    </ul>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-number">3</div>
+                    <h3>Think Before You Click</h3>
+                    <p>Take a moment to evaluate links and attachments before clicking or opening them.</p>
+                    <ul>
+                        <li>Hover over links to preview the destination URL</li>
+                        <li>Look for HTTPS and the padlock icon</li>
+                        <li>Don't download attachments from unknown sources</li>
+                    </ul>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-number">4</div>
+                    <h3>Keep Software Updated</h3>
+                    <p>Regular updates patch security vulnerabilities that phishers might exploit.</p>
+                    <ul>
+                        <li>Enable automatic updates for your operating system</li>
+                        <li>Keep browsers and security software up to date</li>
+                        <li>Update mobile apps regularly</li>
+                    </ul>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-number">5</div>
+                    <h3>Use Security Tools</h3>
+                    <p>Leverage technology to add extra layers of protection.</p>
+                    <ul>
+                        <li>Install and maintain antivirus software</li>
+                        <li>Use email filters and spam blockers</li>
+                        <li>Consider using our AntiPhish tool for suspicious messages</li>
+                    </ul>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-number">6</div>
+                    <h3>Stay Informed</h3>
+                    <p>Keep up with the latest phishing tactics and security threats.</p>
+                    <ul>
+                        <li>Follow security news and updates</li>
+                        <li>Participate in security awareness training</li>
+                        <li>Learn from reported phishing attempts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What To Do -->
+    <section id="what-to-do" class="education-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">What To Do If You're Targeted</h2>
+            <div class="action-steps">
+                <div class="action-step">
+                    <div class="action-icon">🛑</div>
+                    <h3>Don't Panic</h3>
+                    <p>Take a deep breath. Even if you clicked a link, quick action can minimize damage.</p>
+                </div>
+
+                <div class="action-step">
+                    <div class="action-icon">📧</div>
+                    <h3>Don't Respond</h3>
+                    <p>Don't reply to the message or click any links. Mark it as spam or phishing.</p>
+                </div>
+
+                <div class="action-step">
+                    <div class="action-icon">🔒</div>
+                    <h3>Change Passwords</h3>
+                    <p>If you entered credentials on a suspicious site, immediately change those passwords and any accounts using the same password.</p>
+                </div>
+
+                <div class="action-step">
+                    <div class="action-icon">🏦</div>
+                    <h3>Contact Your Bank</h3>
+                    <p>If you provided financial information, contact your bank immediately to freeze accounts and monitor for fraud.</p>
+                </div>
+
+                <div class="action-step">
+                    <div class="action-icon">🔍</div>
+                    <h3>Scan for Malware</h3>
+                    <p>Run a full antivirus scan if you downloaded any files or visited suspicious websites.</p>
+                </div>
+
+                <div class="action-step">
+                    <div class="action-icon">📢</div>
+                    <h3>Report It</h3>
+                    <p>Report the phishing attempt to the organization being impersonated and to relevant authorities.</p>
+                    <div class="report-links">
+                        <a href="https://www.ic3.gov" target="_blank" rel="noopener">Report to IC3</a>
+                        <a href="https://www.ftc.gov/complaint" target="_blank" rel="noopener">Report to FTC</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-box">
+                <h3>Need Help?</h3>
+                <p>If you suspect you've been targeted by a phishing attack, use our analysis tool to verify the message and get recommendations.</p>
+                <a href="/#quick-check" class="btn btn-primary">Analyze Suspicious Message</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Test Your Knowledge</h2>
+            <p class="section-subtitle">Can you spot the phishing attempt?</p>
+
+            <div class="quiz-container">
+                <div class="quiz-question" id="quizQuestion">
+                    <h3>Question <span id="questionNumber">1</span> of 5</h3>
+                    <p id="questionText"></p>
+                    <div class="quiz-options" id="quizOptions"></div>
+                </div>
+                <div class="quiz-result hidden" id="quizResult">
+                    <h3 id="resultTitle"></h3>
+                    <p id="resultExplanation"></p>
+                    <button id="nextQuestion" class="btn btn-primary">Next Question</button>
+                </div>
+                <div class="quiz-score hidden" id="quizScore">
+                    <h3>Quiz Complete!</h3>
+                    <p>You scored <span id="finalScore"></span> out of 5</p>
+                    <p id="scoreMessage"></p>
+                    <button id="restartQuiz" class="btn btn-primary">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AntiPhish</h4>
+                    <p>Protecting users from online fraud and phishing attacks through advanced AI technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/education.html">Education</a></li>
+                        <li><a href="/dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#what-is-phishing">What is Phishing?</a></li>
+                        <li><a href="#red-flags">Red Flags</a></li>
+                        <li><a href="#best-practices">Best Practices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@antiphish.com</p>
+                    <p>Report: report@antiphish.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AntiPhish. All rights reserved. | Built for COMP1682 Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/education.js"></script>
+</body>
+</html>

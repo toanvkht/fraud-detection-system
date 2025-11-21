@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiPhish - Fraud Detection & Reporting System</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                <span class="brand-name">AntiPhish</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/education.html">Education</a></li>
+                <li><a href="/report.html" class="active">Scan & Report</a></li>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="authLink">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Protect Yourself from Online Fraud</h1>
+                <p class="hero-subtitle">AI-powered fraud detection system that analyzes messages, emails, and URLs to keep you safe from phishing attacks and scams.</p>
+                <div class="hero-buttons">
+                    <a href="#quick-check" class="btn btn-primary">Quick Check</a>
+                    <a href="/education.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Threats Detected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Users Protected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">How We Protect You</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Advanced machine learning algorithms analyze message content, URLs, and patterns to detect sophisticated phishing attempts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Protection</h3>
+                    <p>Instant analysis of suspicious messages and links before you click, providing immediate security alerts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Detailed Reports</h3>
+                    <p>Get comprehensive analysis reports with risk scores and actionable recommendations for every submission.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Community Database</h3>
+                    <p>Access a constantly updated database of known phishing URLs and scam patterns reported by our community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Check Section -->
+    <section id="quick-check" class="quick-check">
+        <div class="container">
+            <h2 class="section-title">Quick Security Check</h2>
+            <p class="section-subtitle">Analyze a message, email, or URL for potential phishing threats</p>
+            <div class="check-form-container">
+                <form id="quickCheckForm" class="check-form">
+                    <div class="form-group">
+                        <label for="messageContent">Message or URL to Check</label>
+                        <textarea
+                            id="messageContent"
+                            name="content"
+                            rows="6"
+                            placeholder="Paste the suspicious message, email content, or URL here..."
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageSource">Source (Optional)</label>
+                        <select id="messageSource" name="source">
+                            <option value="">Select source...</option>
+                            <option value="email">Email</option>
+                            <option value="sms">SMS</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="messaging_app">Messaging App</option>
+                            <option value="website">Website</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Analyze Now</button>
+                </form>
+                <div id="checkResult" class="check-result hidden">
+                    <div class="result-header">
+                        <h3>Analysis Result</h3>
+                        <button id="closeResult" class="close-btn">&times;</button>
+                    </div>
+                    <div id="resultContent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Submit Content</h3>
+                    <p>Copy and paste suspicious messages, emails, or URLs into our analysis tool.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis</h3>
+                    <p>Our AI examines the content for known phishing patterns, malicious links, and red flags.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Results</h3>
+                    <p>Receive a detailed risk assessment with recommendations on how to proceed safely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Stay Safe Online?</h2>
+            <p>Create a free account to access advanced features and protect yourself from fraud.</p>
+            <a href="#" id="signupCTA" class="btn btn-primary btn-large">Get Started Free</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AntiPhish</h4>
+                    <p>Protecting users from online fraud and phishing attacks through advanced AI technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/education.html">Education</a></li>
+                        <li><a href="/dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/education.html#what-is-phishing">What is Phishing?</a></li>
+                        <li><a href="/education.html#red-flags">Red Flags</a></li>
+                        <li><a href="/education.html#best-practices">Best Practices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@antiphish.com</p>
+                    <p>Report: report@antiphish.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AntiPhish. All rights reserved. | Built for COMP1682 Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

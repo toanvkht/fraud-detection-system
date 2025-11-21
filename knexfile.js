@@ -1,8 +1,24 @@
 // knexfile.js
 require('dotenv').config();
+const path = require('path');
+
+const useSQLite = process.env.DB_USE_SQLITE === 'true' || !process.env.DB_HOST;
 
 module.exports = {
-  development: {
+  development: useSQLite ? {
+    client: 'sqlite3',
+    connection: {
+      filename: path.join(__dirname, 'fraud-detection.db')
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: './migrations',
+      tableName: 'knex_migrations'
+    },
+    seeds: {
+      directory: './seeds'
+    }
+  } : {
     client: 'pg',
     connection: {
       host: process.env.DB_HOST || '127.0.0.1',
@@ -13,8 +29,10 @@ module.exports = {
       ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false
     },
     migrations: {
-      directory: './migrations'
+      directory: './migrations',
+      tableName: 'knex_migrations'
     },
+    pool: { min: 2, max: 10 },
     seeds: {
       directory: './seeds'
     }

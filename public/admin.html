@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - AntiPhish</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>AntiPhish Admin Dashboard</h1>
+                <div class="header-actions">
+                    <span id="adminName" class="admin-name">Admin User</span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="dashboard-nav">
+            <button class="nav-btn active" data-section="reports">
+                <span class="nav-icon">📋</span>
+                User Reports
+            </button>
+            <button class="nav-btn" data-section="urls">
+                <span class="nav-icon">🔗</span>
+                Known Phishing URLs
+            </button>
+            <button class="nav-btn" data-section="submissions">
+                <span class="nav-icon">📨</span>
+                Message Submissions
+            </button>
+            <button class="nav-btn" data-section="statistics">
+                <span class="nav-icon">📊</span>
+                Statistics
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Statistics Cards -->
+            <section id="statsCards" class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-content">
+                        <h3 id="totalReports">0</h3>
+                        <p>Total Reports</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔗</div>
+                    <div class="stat-content">
+                        <h3 id="totalPhishingUrls">0</h3>
+                        <p>Known Phishing URLs</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📨</div>
+                    <div class="stat-content">
+                        <h3 id="totalSubmissions">0</h3>
+                        <p>Message Submissions</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-content">
+                        <h3 id="pendingReports">0</h3>
+                        <p>Pending Reviews</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Reports Section -->
+            <section id="reportsSection" class="content-section active">
+                <div class="section-header">
+                    <h2>User Reports</h2>
+                    <div class="section-actions">
+                        <select id="reportStatusFilter" class="filter-select">
+                            <option value="">All Status</option>
+                            <option value="open">Open</option>
+                            <option value="in_review">In Review</option>
+                            <option value="resolved">Resolved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <button id="refreshReports" class="btn btn-primary">Refresh</button>
+                    </div>
+                </div>
+                <div id="reportsTable" class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>URL</th>
+                                <th>Reporter</th>
+                                <th>Channel</th>
+                                <th>Details</th>
+                                <th>Status</th>
+                                <th>Created At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportsTableBody">
+                            <tr>
+                                <td colspan="8" class="loading">Loading reports...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Known Phishing URLs Section -->
+            <section id="urlsSection" class="content-section">
+                <div class="section-header">
+                    <h2>Known Phishing URLs</h2>
+                    <div class="section-actions">
+                        <button id="addUrlBtn" class="btn btn-primary">Add URL</button>
+                        <button id="refreshUrls" class="btn btn-secondary">Refresh</button>
+                    </div>
+                </div>
+                <div id="urlsTable" class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>URL</th>
+                                <th>Domain</th>
+                                <th>Source</th>
+                                <th>Severity</th>
+                                <th>Notes</th>
+                                <th>Created At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="urlsTableBody">
+                            <tr>
+                                <td colspan="8" class="loading">Loading URLs...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Message Submissions Section -->
+            <section id="submissionsSection" class="content-section">
+                <div class="section-header">
+                    <h2>Message Submissions</h2>
+                    <div class="section-actions">
+                        <select id="submissionSourceFilter" class="filter-select">
+                            <option value="">All Sources</option>
+                            <option value="email">Email</option>
+                            <option value="sms">SMS</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button id="refreshSubmissions" class="btn btn-primary">Refresh</button>
+                    </div>
+                </div>
+                <div id="submissionsTable" class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Source</th>
+                                <th>Sender</th>
+                                <th>Content Preview</th>
+                                <th>Analysis Score</th>
+                                <th>Is Scam</th>
+                                <th>Submitted At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="submissionsTableBody">
+                            <tr>
+                                <td colspan="9" class="loading">Loading submissions...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section id="statisticsSection" class="content-section">
+                <div class="section-header">
+                    <h2>System Statistics</h2>
+                    <button id="refreshStats" class="btn btn-primary">Refresh</button>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>Detection Rate</h3>
+                        <p class="stat-value" id="detectionRate">0%</p>
+                        <p class="stat-description">Messages flagged as scam</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Active Users</h3>
+                        <p class="stat-value" id="activeUsers">0</p>
+                        <p class="stat-description">Users with submissions</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Average Score</h3>
+                        <p class="stat-value" id="averageScore">0</p>
+                        <p class="stat-description">Mean scam detection score</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Recent Activity</h3>
+                        <p class="stat-value" id="recentActivity">0</p>
+                        <p class="stat-description">Submissions in last 24h</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add URL Modal -->
+    <div id="addUrlModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Phishing URL</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="addUrlForm">
+                <div class="form-group">
+                    <label for="urlInput">URL *</label>
+                    <input type="text" id="urlInput" required placeholder="https://example.com/phishing">
+                </div>
+                <div class="form-group">
+                    <label for="sourceInput">Source</label>
+                    <input type="text" id="sourceInput" placeholder="e.g., user report, manual entry">
+                </div>
+                <div class="form-group">
+                    <label for="severityInput">Severity</label>
+                    <select id="severityInput">
+                        <option value="">Select severity</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="critical">Critical</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notesInput">Notes</label>
+                    <textarea id="notesInput" rows="3" placeholder="Additional notes about this URL"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add URL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Details</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div id="detailsContent" class="modal-body">
+                <!-- Details will be populated dynamically -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

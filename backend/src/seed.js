@@ -1,14 +1,25 @@
-// seed.js
-const db = require('./db');
+// backend/src/seed.js (add at top)
+const { Pool } = require('pg');
+const pool = new Pool(); // uses process.env.* from .env
 
-async function seed() {
-  await db.query(
-    `INSERT INTO known_phishing_urls (url, domain, source, severity)
-     VALUES ($1,$2,$3,$4) RETURNING id`,
-    ['https://phish-example.com/login','phish-example.com','seed','high']
-  );
-  console.log('seeded');
-  process.exit(0);
+async function showConnectionInfo(client) {
+  const res = await client.query('SELECT current_database() AS db, current_schema() AS schema, current_user AS user;');
+  console.log('DB connection info:', res.rows[0]);
 }
 
-seed().catch(e=>{console.error(e); process.exit(1);});
+async function seed() {
+  const client = await pool.connect();
+  try {
+    await showConnectionInfo(client);
+    // existing seed logic...
+  } finally {
+    client.release();
+    await pool.end();
+  }
+}
+
+seed().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
+
